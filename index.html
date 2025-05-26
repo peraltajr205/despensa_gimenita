@@ -1,0 +1,72 @@
+<html lang="es">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>Despensa Gimenita</title>
+    <!-- Enlace a la hoja de estilos externa -->
+    <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+
+<body>
+    <div class="head">
+        <h1>Despensa Gimenita</h1>
+        <div class="nav">
+            <ul>
+                <li><a href="bebidas.html">Bebidas</a></li>
+                <li><a href="carnicos.html">Cárnicos</a></li>
+                <li><a href="prd_limpieza.html">Productos de Limpieza</a></li>
+                <li><a href="lacteos.html">Lácteos</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="principal">
+        <!-- Sección Nosotros -->
+        <div id="nosotros">
+            <h2>Nosotros</h2>
+            <h3>Historia</h3>
+            <p>La ‘Despensa Gimenita’ nació en marzo de 2021, en pleno aislamiento por la pandemia de
+                COVID‑19. Tras ser despedida de su empleo, la fundadora aprovechó la indemnización para
+                emprender este pequeño negocio de conveniencia.</p>
+            <h3>Visión</h3>
+            <p>Ser la tienda de conveniencia más confiable y accesible en Lambaré, ofreciendo productos de
+                calidad con un excelente servicio al cliente.</p>
+            <h3>Misión</h3>
+            <p>Despensa Gimenita proporciona productos esenciales con precios justos y atención
+                personalizada, mejorando la experiencia de compra de las familias de Lambaré.</p>
+            <h3>Objetivos</h3>
+            <ul>
+                <li>Nos comprometemos a fidelizar a nuestros clientes a través de productos de calidad y
+                    un servicio excepcional, construyendo relaciones duraderas basadas en la confianza</li>
+                <li>Aspiramos a expandir nuestras fronteras, fortaleciendo nuestra presencia local y
+                    abriendo nuevas sucursales que nos permitan llevar nuestros valores y calidad a más
+                    comunidades</li>
+                <li>Integrar herramientas tecnológicas para ofrecer una experiencia de compra moderna y
+                    accesible</li>
+            </ul>
+        </div>
+
+        <!-- Sección de Contacto -->
+        <div id="contacto">
+            <h2>Contáctanos</h2>
+            <form action="procesar_formulario.php" method="post">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="correo">Correo:</label>
+                <input type="email" id="correo" name="correo" required>
+
+                <label for="comentario">Comentario:</label>
+                <textarea id="comentario" name="comentario" rows="4" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+    </div>
+
+    <div class="pie_pag">
+        <p>&copy; 2025 Despensa Gimenita. Todos los derechos reservados.</p>
+    </div>
+</body>
+
+</html>
