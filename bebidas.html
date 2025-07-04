@@ -1,44 +1,92 @@
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Bebidas - Despensa Gimenita</title>
-  <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despensa Gimenita - Bebidas</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
-  <div class="head">
-    <h1>Bebidas</h1>
-    <div class="nav">
-      <ul>
-        <li><a href="index.html">&larr; Inicio</a></li>
-      </ul>
-    </div>
-  </div>
+    <header>
+        <h1>Despensa Gimenita</h1>
+    </header>
 
-  <div class="principal">
-      <h2>Nuestra selección de bebidas</h2>
+    <nav>
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="carnicos.html">Cárnicos</a></li>
+            <li><a href="lacteos.html">Lácteos</a></li>
+            <li><a href="prd_limpieza.html">Productos de Limpieza</a></li>
+            <li><a href="bebidas.html" class="active">Bebidas</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+        </ul>
+    </nav>
 
-      <div class="producto">
-        <img src="images/coca_cola.jpg" alt="Botella coca cola 2L">
-        <h3>Coca Cola 2L</h3>
-        <p><strong>Precio:</strong> GS. 10.000</p>
-        <p><strong>Disponibilidad:</strong> En stock</p>
-        <p>Gaseosa de cola con gas, presentación de 2 litros.</p>
-      </div>
+    <main>
+        <section class="productos-categoria">
+            <h2>Refresca tu Día con Nuestras Bebidas</h2>
+            <div class="grid-productos">
+                <article class="producto-card">
+                    <img src="images/coca_cola.jpg" alt="Imagen de Gaseosa Cola">
+                    <h3>Gaseosa Cola 2.5L</h3>
+                    <p class="descripcion">Clásica gaseosa sabor cola en formato familiar de 2.5 litros.</p>
+                    <p class="precio">Gs. 13.000</p>
+                    <p class="stock">Stock: 50 unidades</p>
+                </article>
 
-      <div class="producto">
-        <img src="images/watts.jpg" alt="Jugo watts de naranja en carton">
-        <h3>Jugo Watts de Naranja de 1 litro</h3>
-        <p><strong>Precio:</strong> GS. 8.000</p>
-        <p><strong>Disponibilidad:</strong> En stock</p>
-        <p>Jugo Watts de naranja de 1 litro, presentación en carton.</p>
-      </div>
-  </div>
+                <article class="producto-card">
+                    <img src="https://placehold.co/300x200/E8E8E8/B0B0B0?text=Agua+Mineral" alt="Imagen de Agua Mineral">
+                    <h3>Agua Mineral sin Gas 2L</h3>
+                    <p class="descripcion">Agua mineral natural sin gas, pura y refrescante. Botella de 2 litros.</p>
+                    <p class="precio">Gs. 5.000</p>
+                    <p class="stock">Stock: 70 unidades</p>
+                </article>
 
-  <div class="pie_pag">
-    <p>&copy; 2021–2025 Despensa Gimenita</p>
-  </div>
+                <article class="producto-card">
+                    <img src="images/watts.jpg" alt="Imagen de Jugo de Naranja">
+                    <h3>Jugo de Naranja 1L</h3>
+                    <p class="descripcion">Jugo de naranja exprimido, 100% natural. Envase de 1 litro.</p>
+                    <p class="precio">Gs. 15.000</p>
+                    <p class="stock">Stock: 30 unidades</p>
+                </article>
+
+                <article class="producto-card">
+                    <img src="https://placehold.co/300x200/E8E8E8/B0B0B0?text=Cerveza+Lata" alt="Imagen de Cerveza en Lata">
+                    <h3>Cerveza Pilsen Lata 473ml</h3>
+                    <p class="descripcion">Cerveza rubia tipo Pilsen en lata. Pack de 6 unidades disponible.</p>
+                    <p class="precio">Gs. 7.000/lata</p>
+                    <p class="stock">Stock: 80 latas</p>
+                </article>
+                <article class="producto-card">
+                    <img src="https://placehold.co/300x200/E8E8E8/B0B0B0?text=Vino+Tinto" alt="Imagen de Vino Tinto">
+                    <h3>Vino Tinto Malbec 750ml</h3>
+                    <p class="descripcion">Vino tinto Malbec de cuerpo medio, ideal para acompañar carnes.</p>
+                    <p class="precio">Gs. 45.000</p>
+                    <p class="stock">Stock: 20 botellas</p>
+                </article>
+                <article class="producto-card">
+                    <img src="https://placehold.co/300x200/E8E8E8/B0B0B0?text=Bebida+Energizante" alt="Imagen de Bebida Energizante">
+                    <h3>Bebida Energizante 250ml</h3>
+                    <p class="descripcion">Bebida energizante para recargar tus pilas. Sabor original.</p>
+                    <p class="precio">Gs. 10.000</p>
+                    <p class="stock">Stock: 45 unidades</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Encuéntranos en nuestras redes sociales:</p>
+        <div class="redes-sociales">
+            <a href="https://wa.me/TUNUMERODEWHATSAPP" target="_blank">WhatsApp</a>
+            <a href="https://instagram.com/TUCUENTADEINSTAGRAM" target="_blank">Instagram</a>
+            <a href="https://facebook.com/TUCUENTADEFACEBOOK" target="_blank">Facebook</a>
+        </div>
+        <p>&copy; 2024 Despensa Gimenita. Todos los derechos reservados.</p>
+    </footer>
+
 </body>
 
 </html>

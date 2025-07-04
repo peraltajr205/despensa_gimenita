@@ -1,72 +1,79 @@
+<!DOCTYPE html>
 <html lang="es">
-
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <title>Despensa Gimenita</title>
-    <!-- Enlace a la hoja de estilos externa -->
-    <link rel="stylesheet" type="text/css" href="styles/style.css">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despensa Gimenita - Inicio</title>
+    <link rel="stylesheet" href="styles/style.css">
+    </head>
 
 <body>
-    <div class="head">
+    
+    <header>
         <h1>Despensa Gimenita</h1>
-        <div class="nav">
-            <ul>
-                <li><a href="bebidas.html">Bebidas</a></li>
-                <li><a href="carnicos.html">Cárnicos</a></li>
-                <li><a href="prd_limpieza.html">Productos de Limpieza</a></li>
-                <li><a href="lacteos.html">Lácteos</a></li>
+        </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li><a href="carnicos.html">Cárnicos</a></li>
+            <li><a href="lacteos.html">Lácteos</a></li>
+            <li><a href="prd_limpieza.html">Productos de Limpieza</a></li>
+            <li><a href="bebidas.html">Bebidas</a></li>
+            <li><a href="nosotros.html">Nosotros</a></li>
             </ul>
-        </div>
-    </div>
+    </nav>
 
-    <div class="principal">
-        <!-- Sección Nosotros -->
-        <div id="nosotros">
-            <h2>Nosotros</h2>
-            <h3>Historia</h3>
-            <p>La ‘Despensa Gimenita’ nació en marzo de 2021, en pleno aislamiento por la pandemia de
-                COVID‑19. Tras ser despedida de su empleo, la fundadora aprovechó la indemnización para
-                emprender este pequeño negocio de conveniencia.</p>
-            <h3>Visión</h3>
-            <p>Ser la tienda de conveniencia más confiable y accesible en Lambaré, ofreciendo productos de
-                calidad con un excelente servicio al cliente.</p>
-            <h3>Misión</h3>
-            <p>Despensa Gimenita proporciona productos esenciales con precios justos y atención
-                personalizada, mejorando la experiencia de compra de las familias de Lambaré.</p>
-            <h3>Objetivos</h3>
-            <ul>
-                <li>Nos comprometemos a fidelizar a nuestros clientes a través de productos de calidad y
-                    un servicio excepcional, construyendo relaciones duraderas basadas en la confianza</li>
-                <li>Aspiramos a expandir nuestras fronteras, fortaleciendo nuestra presencia local y
-                    abriendo nuevas sucursales que nos permitan llevar nuestros valores y calidad a más
-                    comunidades</li>
-                <li>Integrar herramientas tecnológicas para ofrecer una experiencia de compra moderna y
-                    accesible</li>
-            </ul>
-        </div>
+    <main>
+        <section class="productos-destacados">
+            <h2>Productos Destacados</h2>
+            <div class="grid-productos">
+                <article class="producto-card">
+                    <img src="https://placehold.co/300x200/E8E8E8/B0B0B0?text=Pollo+Fresco" alt="Imagen de Pollo Fresco">
+                    <h3>Pollo Fresco Entero</h3>
+                    <p class="descripcion">Pollo entero, ideal para tus comidas familiares. Calidad garantizada.</p>
+                    <p class="precio">Gs. 25.000/kg</p>
+                    <p class="stock">Stock: 15 unidades</p>
+                    </article>
 
-        <!-- Sección de Contacto -->
-        <div id="contacto">
-            <h2>Contáctanos</h2>
-            <form action="procesar_formulario.php" method="post">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="nombre" name="nombre" required>
+                <article class="producto-card">
+                    <img src="https://placehold.co/300x200/E8E8E8/B0B0B0?text=Leche+Entera" alt="Imagen de Leche Entera">
+                    <h3>Leche Entera Larga Vida</h3>
+                    <p class="descripcion">Leche entera UHT en cartón de 1 litro. Frescura y sabor para tu día a día.</p>
+                    <p class="precio">Gs. 7.500</p>
+                    <p class="stock">Stock: 50 unidades</p>
+                </article>
 
-                <label for="correo">Correo:</label>
-                <input type="email" id="correo" name="correo" required>
+                <article class="producto-card">
+                    <img src="https://placehold.co/300x200/E8E8E8/B0B0B0?text=Detergente+L%C3%ADquido" alt="Imagen de Detergente Líquido">
+                    <h3>Detergente Líquido</h3>
+                    <p class="descripcion">Detergente líquido para ropa, aroma floral. Rinde hasta 30 lavados.</p>
+                    <p class="precio">Gs. 30.000</p>
+                    <p class="stock">Stock: 30 unidades</p>
+                </article>
 
-                <label for="comentario">Comentario:</label>
-                <textarea id="comentario" name="comentario" rows="4" required></textarea>
+                <article class="producto-card">
+                    <img src="https://placehold.co/300x200/E8E8E8/B0B0B0?text=Gaseosa+Cola" alt="Imagen de Gaseosa Cola">
+                    <h3>Gaseosa Cola 2L</h3>
+                    <p class="descripcion">Refrescante gaseosa sabor cola en botella de 2 litros. Perfecta para compartir.</p>
+                    <p class="precio">Gs. 12.000</p>
+                    <p class="stock">Stock: 40 unidades</p>
+                </article>
 
-                <button type="submit">Enviar</button>
-            </form>
-        </div>
-    </div>
+            </div>
+            </section>
+        </main>
 
-    <div class="pie_pag">
-        <p>&copy; 2025 Despensa Gimenita. Todos los derechos reservados.</p>
-    </div>
+    <footer>
+        <p>Encuéntranos en nuestras redes sociales:</p>
+        <div class="redes-sociales">
+            <a href="https://wa.me/0984322168" target="_blank">WhatsApp</a>
+            <a href="https://instagram.com/" target="_blank">Instagram</a>
+            <a href="https://facebook.com/" target="_blank">Facebook</a>
+            </div>
+        <p>&copy; 2024 Despensa Gimenita. Todos los derechos reservados.</p>
+        </footer>
+
 </body>
 
 </html>
