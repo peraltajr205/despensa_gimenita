@@ -12,7 +12,7 @@ body {
 
 /* Estilos para el encabezado (header) */
 header {
-    background-image: url('https://placehold.co/1200x350/FE001A/FFFFFF?text=Despensa+Gimenita'); /* Imagen de fondo del encabezado */
+    background-color: #FE001A; /* Imagen de fondo del encabezado */
     /* La URL es un placeholder. Deberías reemplazarla con tu propia imagen.
        FE001A es el color de fondo del placeholder (rojo), FFFFFF es el color del texto. */
     background-size: cover; /* Hace que la imagen de fondo cubra todo el área del header */
