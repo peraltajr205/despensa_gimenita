@@ -1,44 +1,96 @@
+<!DOCTYPE html>
 <html lang="es">
 
 <head>
-  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-  <title>Carnicos - Despensa Gimenita</title>
-  <link rel="stylesheet" type="text/css" href="styles/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Despensa Gimenita - Cárnicos</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
 
 <body>
-  <div class="head">
-    <h1>Carnicos</h1>
-    <div class="nav">
-      <ul>
-        <li><a href="index.html">&larr; Inicio</a></li>
-      </ul>
-    </div>
-  </div>
+    <header>
+        <h1>Despensa Gimenita</h1>
+    </header>
 
-  <div class="principal">
-      <h2>Nuestra selección de carnicos</h2>
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li>
+                <a href="#">Productos</a>
+                <ul class="submenu">
+                    <li><a href="carnicos.html">Cárnicos</a></li>
+                    <li><a href="lacteos.html">Lácteos</a></li>
+                    <li><a href="prd_limpieza.html">Productos de Limpieza</a></li>
+                    <li><a href="bebidas.html">Bebidas</a></li>
+                </ul>
+            </li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="comentarios.html">Comentarios</a></li>
+        </ul>
+    </nav>
 
-      <div class="producto">
-        <img src="images/carne_molida_500x375.jpg" alt="Carne molida">
-        <h3>Carne molida de primera</h3>
-        <p><strong>Precio:</strong> GS. 40.000 el kilo</p>
-        <p><strong>Disponibilidad:</strong> En stock</p>
-        <p>Carne molida de primera, excelente para rellenos de empanadas, tartas, etc</p>
-      </div>
+    <main>
+        <section class="productos-categoria">
+            <h2>Nuestros Productos Cárnicos</h2>
+            <div class="grid-productos">
+                <article class="producto-card">
+                    <img src="images/milanesa.png" alt="Imagen de Milanesa de Carne">
+                    <h3>Milanesa de lomo</h3>
+                    <p class="descripcion">Corte fresco de lomo empanado para milanesa, tierna y sabrosa.</p>
+                    <p class="precio">Gs. 45.000/kg</p>
+                    <p class="stock">Stock: 20 kg</p>
+                </article>
 
-      <div class="producto">
-        <img src="images/costilla_ancha_500x375.jpg" alt="costilla ancha">
-        <h3>Costilla ancha</h3>
-        <p><strong>Precio:</strong> GS. 57.000 el kilo</p>
-        <p><strong>Disponibilidad:</strong> En stock</p>
-        <p>Costilla ancha premium, para el asado de los domingos</p>
-      </div>
-  </div>
+                <article class="producto-card">
+                    <img src="images/pechuga_congelada.jpeg" alt="Imagen de Pechuga de Pollo">
+                    <h3>Pechuga de Pollo Deshuesada</h3>
+                    <p class="descripcion">Pechugas de pollo congeladas. Ideal para múltiples recetas.</p>
+                    <p class="precio">Gs. 35.000/kg</p>
+                    <p class="stock">Stock: 25 kg</p>
+                </article>
 
-  <div class="pie_pag">
-    <p>&copy; 2021–2025 Despensa Gimenita</p>
-  </div>
+                <article class="producto-card">
+                    <img src="images/carnaza_negra.jpeg" alt="Imagen de carnaza negra">
+                    <h3>Carnaza negra</h3>
+                    <p class="descripcion">Carnaza negra por kilo, perfectas para un guiso o tallarín.</p>
+                    <p class="precio">Gs. 40.000/kg</p>
+                    <p class="stock">Stock: 18 kg</p>
+                </article>
+
+                <article class="producto-card">
+                    <img src="images/chorizo_parrillero.png" alt="Imagen de Chorizo Parrillero">
+                    <h3>Chorizo Parrillero Tradicional</h3>
+                    <p class="descripcion">Chorizos frescos tipo toscano, ideales para asados y picadas.</p>
+                    <p class="precio">Gs. 38.000/kg</p>
+                    <p class="stock">Stock: 30 unidades</p>
+                </article>
+                 <article class="producto-card">
+                    <img src="images/carne_molida.jpeg" alt="Imagen de Carne Molida">
+                    <h3>Carne Molida Especial</h3>
+                    <p class="descripcion">Carne vacuna molida de primera calidad, baja en grasa. Perfecta para salsas y hamburguesas.</p>
+                    <p class="precio">Gs. 32.000/kg</p>
+                    <p class="stock">Stock: 22 kg</p>
+                </article>
+                 <article class="producto-card">
+                    <img src="images/hamburguesa.jpeg" alt="Imagen de Hamburguesas">
+                    <h3>Medallones de Hamburguesa</h3>
+                    <p class="descripcion">Medallones de hamburguesa listos para cocinar.</p>
+                    <p class="precio">Gs. 2.500/unidad</p>
+                    <p class="stock">Stock: 40 unidades</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>Encuéntranos en nuestras redes sociales:</p>
+        <div class="redes-sociales">
+            <a href="https://wa.me/0984322168" target="_blank">WhatsApp</a>
+        </div>
+        <p>&copy; 2024 Despensa Gimenita. Todos los derechos reservados.</p>
+    </footer>
+
 </body>
 
 </html>

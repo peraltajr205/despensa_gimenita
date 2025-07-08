@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Comentarios - Despensa Gimenita</title>
+    <link rel="stylesheet" href="styles/style.css">
+</head>
+
+<body>
+    <header>
+        <h1>Despensa Gimenita</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="index.html" class="active">Inicio</a></li>
+            <li>
+                <a href="#">Productos</a>
+                <ul class="submenu">
+                    <li><a href="carnicos.html">Cárnicos</a></li>
+                    <li><a href="lacteos.html">Lácteos</a></li>
+                    <li><a href="prd_limpieza.html">Productos de Limpieza</a></li>
+                    <li><a href="bebidas.html">Bebidas</a></li>
+                </ul>
+            </li>
+            <li><a href="nosotros.html">Nosotros</a></li>
+            <li><a href="comentarios.html">Comentarios</a></li>
+        </ul>
+    </nav>
+    <main>
+        <section class="comentarios">
+            <h1>¡Nos encantaría saber tu opinión! Por favor, déjanos tus comentarios y sugerencias.</p>
+                <form id="comentariosForm">
+                    <label for="email">Correo electrónico:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
+                    <label for="comentario">Comentarios:</label><br>
+                    <textarea id="comentario" name="comentario" rows="4" required></textarea><br><br>
+                    <button type="submit">Enviar</button>
+                </form>
+                <p id="mensajeEnvio" style="color: green; display: none;">¡Gracias por tus comentarios!</p>
+                <script>
+                    document.getElementById('comentariosForm').addEventListener('submit', function (e) {
+                        e.preventDefault();
+                        const email = document.getElementById('email').value;
+                        const comentario = document.getElementById('comentario').value;
+                        // Cambia este correo por el correo fijo de destino
+                        const destinatario = "peraltasanabriaj14@gmail.com";
+                        const asunto = encodeURIComponent("Nuevo comentario de cliente");
+                        const cuerpo = encodeURIComponent(
+                            "Correo del usuario: " + email + "\n\nComentario:\n" + comentario
+                        );
+                        // Intenta abrir el cliente de correo del usuario
+                        window.location.href = `mailto:${destinatario}?subject=${asunto}&body=${cuerpo}`;
+                        document.getElementById('mensajeEnvio').style.display = 'block';
+                        document.getElementById('comentariosForm').reset();
+                    });
+                </script>
+            </h1>
+        </section>
+    </main>
+</body>
+
+</html>
