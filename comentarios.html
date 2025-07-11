@@ -35,7 +35,8 @@
             <!-- Hero section mejorado -->
             <div class="hero-comentarios">
                 <h1>¡Queremos Escucharte!</h1>
-                <p>Tu opinión es muy importante para nosotros. Comparte tu experiencia y ayúdanos a mejorar cada día.</p>
+                <p>Tu opinión es muy importante para nosotros. Comparte tu experiencia y ayúdanos a mejorar cada día.
+                </p>
             </div>
 
             <!-- Formulario mejorado -->
@@ -46,12 +47,12 @@
                         <label for="nombre">👤 Nombre completo:</label>
                         <input type="text" id="nombre" name="nombre" required placeholder="Ingresa tu nombre completo">
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="email">📧 Correo electrónico:</label>
                         <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="telefono">📱 Teléfono (opcional):</label>
                         <input type="tel" id="telefono" name="telefono" placeholder="0984-123-456">
@@ -71,7 +72,8 @@
 
                     <div class="form-group">
                         <label for="categoria">🏷️ Categoría del comentario:</label>
-                        <select id="categoria" name="categoria" style="width: 100%; padding: 12px 15px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1em;">
+                        <select id="categoria" name="categoria"
+                            style="width: 100%; padding: 12px 15px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1em;">
                             <option value="">Selecciona una categoría</option>
                             <option value="producto">Productos</option>
                             <option value="servicio">Atención al Cliente</option>
@@ -80,15 +82,16 @@
                             <option value="otro">Otro</option>
                         </select>
                     </div>
-                    
+
                     <div class="form-group">
                         <label for="comentario">💬 Cuéntanos tu experiencia:</label>
-                        <textarea id="comentario" name="comentario" rows="6" required placeholder="Describe tu experiencia con nosotros, qué te gustó más, qué podríamos mejorar..."></textarea>
+                        <textarea id="comentario" name="comentario" rows="6" required
+                            placeholder="Describe tu experiencia con nosotros, qué te gustó más, qué podríamos mejorar..."></textarea>
                     </div>
-                    
+
                     <button type="submit" class="submit-btn">Enviar Comentario</button>
                 </form>
-                
+
                 <div id="mensajeEnvio" class="mensaje-exito">
                     <h3>¡Gracias por tu comentario! 🎉</h3>
                     <p>Tu opinión es muy valiosa para nosotros. Te contactaremos pronto.</p>
@@ -97,21 +100,25 @@
 
             <!-- Sección de testimonios -->
             <div class="testimonios-section">
-                <h2 style="color: #2E7D32; text-align: center; margin-bottom: 30px;">💭 Lo que dicen nuestros clientes</h2>
+                <h2 style="color: #2E7D32; text-align: center; margin-bottom: 30px;">💭 Lo que dicen nuestros clientes
+                </h2>
                 <div class="testimonios-grid">
                     <div class="testimonio-card">
                         <div class="testimonio-rating">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonio-texto">"Excelente atención y productos frescos. El personal siempre está dispuesto a ayudar con una sonrisa."</p>
+                        <p class="testimonio-texto">"Excelente atención y productos frescos. El personal siempre está
+                            dispuesto a ayudar con una sonrisa."</p>
                         <p class="testimonio-autor">- María González</p>
                     </div>
                     <div class="testimonio-card">
                         <div class="testimonio-rating">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonio-texto">"La mejor despensa del barrio. Precios justos y gran variedad de productos."</p>
+                        <p class="testimonio-texto">"La mejor despensa del barrio. Precios justos y gran variedad de
+                            productos."</p>
                         <p class="testimonio-autor">- Carlos Rodríguez</p>
                     </div>
                     <div class="testimonio-card">
                         <div class="testimonio-rating">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonio-texto">"Muy conveniente y siempre tienen lo que necesito. Recomendado al 100%."</p>
+                        <p class="testimonio-texto">"Muy conveniente y siempre tienen lo que necesito. Recomendado al
+                            100%."</p>
                         <p class="testimonio-autor">- Ana Martínez</p>
                     </div>
                 </div>
@@ -144,28 +151,30 @@
                 </div>
             </div>
 
-            <!-- Contacto rápido -->
-            <div class="contacto-rapido">
-                <h3>¿Necesitas ayuda inmediata?</h3>
-                <p>Contáctanos directamente para una atención más rápida</p>
-                <a href="https://wa.me/0984322168" class="contacto-btn" target="_blank">📱 WhatsApp</a>
-                <a href="tel:0984322168" class="contacto-btn">📞 Llamar</a>
-            </div>
+
         </div>
     </main>
+
+    <footer>
+        <p>Encuéntranos en nuestras redes sociales:</p>
+        <div class="redes-sociales">
+            <a href="https://wa.me/0984322168" target="_blank">WhatsApp</a>
+        </div>
+        <p>&copy; 2024 Despensa Gimenita. Todos los derechos reservados.</p>
+    </footer>
 
     <script>
         // Sistema de calificación con estrellas
         let currentRating = 0;
         const stars = document.querySelectorAll('.star');
-        
+
         // Evento para cada estrella
         stars.forEach((star, index) => {
             // Hover effect - ilumina las estrellas hasta la posición actual
             star.addEventListener('mouseenter', () => {
                 highlightStars(index + 1);
             });
-            
+
             // Click event - establece la calificación
             star.addEventListener('click', () => {
                 currentRating = index + 1;
@@ -198,37 +207,37 @@
         // Validación mejorada del formulario
         document.getElementById('comentariosForm').addEventListener('submit', function (e) {
             e.preventDefault();
-            
+
             // Obtener valores del formulario
             const nombre = document.getElementById('nombre').value.trim();
             const email = document.getElementById('email').value.trim();
             const telefono = document.getElementById('telefono').value.trim();
             const categoria = document.getElementById('categoria').value;
             const comentario = document.getElementById('comentario').value.trim();
-            
+
             // Validaciones adicionales
             if (!nombre) {
                 alert('Por favor, ingresa tu nombre completo.');
                 document.getElementById('nombre').focus();
                 return;
             }
-            
+
             if (!email || !validateEmail(email)) {
                 alert('Por favor, ingresa un correo electrónico válido.');
                 document.getElementById('email').focus();
                 return;
             }
-            
+
             if (!comentario || comentario.length < 10) {
                 alert('Por favor, ingresa un comentario de al menos 10 caracteres.');
                 document.getElementById('comentario').focus();
                 return;
             }
-            
+
             // Preparar datos para el correo
             const destinatario = "peraltasanabriaj14@gmail.com";
             const asunto = encodeURIComponent("Nuevo comentario de cliente - Despensa Gimenita");
-            
+
             // Crear el cuerpo del mensaje con toda la información
             let cuerpoMensaje = `NUEVO COMENTARIO DE CLIENTE\n\n`;
             cuerpoMensaje += `👤 Nombre: ${nombre}\n`;
@@ -239,23 +248,23 @@
             cuerpoMensaje += `\n💬 Comentario:\n${comentario}\n\n`;
             cuerpoMensaje += `Fecha: ${new Date().toLocaleString()}\n`;
             cuerpoMensaje += `---\nEnviado desde la página web de Despensa Gimenita`;
-            
+
             const cuerpo = encodeURIComponent(cuerpoMensaje);
-            
+
             // Abrir cliente de correo
             window.location.href = `mailto:${destinatario}?subject=${asunto}&body=${cuerpo}`;
-            
+
             // Mostrar mensaje de éxito con animación
             const mensajeEnvio = document.getElementById('mensajeEnvio');
             mensajeEnvio.style.display = 'block';
-            
+
             // Limpiar formulario
             document.getElementById('comentariosForm').reset();
             setRating(0);
-            
+
             // Scroll suave hacia el mensaje de éxito
             mensajeEnvio.scrollIntoView({ behavior: 'smooth' });
-            
+
             // Opcional: Ocultar mensaje después de 5 segundos
             setTimeout(() => {
                 mensajeEnvio.style.display = 'none';
@@ -269,11 +278,11 @@
         }
 
         // Efecto de escritura en tiempo real para el contador de caracteres
-        document.getElementById('comentario').addEventListener('input', function() {
+        document.getElementById('comentario').addEventListener('input', function () {
             const textarea = this;
             const maxLength = 500;
             const currentLength = textarea.value.length;
-            
+
             // Crear contador si no existe
             let contador = document.getElementById('contador-caracteres');
             if (!contador) {
@@ -282,10 +291,10 @@
                 contador.style.cssText = 'text-align: right; font-size: 0.9em; color: #666; margin-top: 5px;';
                 textarea.parentNode.appendChild(contador);
             }
-            
+
             // Actualizar contador
             contador.textContent = `${currentLength}/500 caracteres`;
-            
+
             // Cambiar color si se acerca al límite
             if (currentLength > 400) {
                 contador.style.color = '#ff9800';
