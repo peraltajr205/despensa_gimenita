@@ -1,81 +1,95 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Despensa Gimenita - Productos de Limpieza</title>
+    
+    <!-- Hoja de estilos unificada -->
     <link rel="stylesheet" href="styles/style.css">
+    
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
-    <header>
-        <h1>Despensa Gimenita</h1>
+
+    <!-- Encabezado principal del sitio -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><i class="fas fa-store"></i> Despensa Gimenita</a>
+            </div>
+            <!-- Menú de navegación principal -->
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <!-- Menú desplegable para productos -->
+                    <li class="submenu">
+                        <a href="#" class="active">Productos <i class="fas fa-chevron-down fa-xs"></i></a>
+                        <div class="dropdown-content">
+                            <a href="carnicos.html">Cárnicos</a>
+                            <a href="prd_limpieza.html">Limpieza</a>
+                            <a href="bebidas.html">Bebidas</a>
+                            <a href="lacteos.html">Lácteos</a>
+                        </div>
+                    </li>
+                    <li><a href="comentarios.html">Comentarios</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html" class="active">Inicio</a></li>
-            <li>
-                <a href="#">Productos</a>
-                <ul class="submenu">
-                    <li><a href="carnicos.html">Cárnicos</a></li>
-                    <li><a href="lacteos.html">Lácteos</a></li>
-                    <li><a href="prd_limpieza.html">Productos de Limpieza</a></li>
-                    <li><a href="bebidas.html">Bebidas</a></li>
-                </ul>
-            </li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="comentarios.html">Comentarios</a></li>
-        </ul>
-    </nav>
-
     <main>
-        <section class="productos-categoria">
-            <h2>Todo para un Hogar Impecable</h2>
-            <div class="grid-productos">
-                <article class="producto-card">
-                    <img src="images/jabon_polvo.jpeg" alt="Imagen de jabon en polvo para Ropa">
+        <section class="container">
+            <h2 class="section-title">🧼 Todo para un Hogar Impecable</h2>
+            
+            <!-- Grid para mostrar los productos de limpieza -->
+            <div class="grid-layout">
+                <article class="product-card">
+                    <img src="https://via.placeholder.com/300x200.png?text=Jabón+en+Polvo" alt="Imagen de jabon en polvo para Ropa">
                     <h3>Jabón en Polvo 1kg</h3>
-                    <p class="descripcion">Jabón en polvo para ropa blanca y de color. Limpieza profunda y aroma fresco.</p>
+                    <p class="descripcion">Para ropa blanca y de color. Limpieza profunda y aroma fresco.</p>
                     <p class="precio">Gs. 20.000</p>
                     <p class="stock">Stock: 40 unidades</p>
                 </article>
 
-                <article class="producto-card">
-                    <img src="images/lavandina.jpeg" alt="Imagen de Lavandina">
+                <article class="product-card">
+                    <img src="https://via.placeholder.com/300x200.png?text=Lavandina" alt="Imagen de Lavandina">
                     <h3>Lavandina Concentrada 1L</h3>
                     <p class="descripcion">Lavandina líquida concentrada. Desinfección total para tu hogar.</p>
                     <p class="precio">Gs. 8.000</p>
                     <p class="stock">Stock: 50 unidades</p>
                 </article>
 
-                <article class="producto-card">
-                    <img src="images/limp_piso.jpeg" alt="Imagen de Limpiador de Pisos">
+                <article class="product-card">
+                    <img src="https://via.placeholder.com/300x200.png?text=Limpiador+de+Pisos" alt="Imagen de Limpiador de Pisos">
                     <h3>Limpiador de Pisos Pino 1L</h3>
-                    <p class="descripcion">Limpiador líquido para pisos con aroma a pino. Brillo y frescura duradera.</p>
+                    <p class="descripcion">Limpiador líquido para pisos con aroma a pino. Brillo y frescura.</p>
                     <p class="precio">Gs. 12.000</p>
                     <p class="stock">Stock: 35 unidades</p>
                 </article>
 
-                <article class="producto-card">
-                    <img src="images/esponja.jpeg" alt="Imagen de Esponja Multiuso">
+                <article class="product-card">
+                    <img src="https://via.placeholder.com/300x200.png?text=Esponja" alt="Imagen de Esponja Multiuso">
                     <h3>Esponja Multiuso</h3>
-                    <p class="descripcion">Esponja multiuso, ideales para cocina y baño. No rayan.</p>
+                    <p class="descripcion">Ideales para cocina y baño. No rayan las superficies delicadas.</p>
                     <p class="precio">Gs. 7.000</p>
                     <p class="stock">Stock: 60 packs</p>
                 </article>
-                <article class="producto-card">
-                    <img src="images/desinfectante_lysoform.jpg" alt="Imagen de Desinfectante en Aerosol">
+                
+                <article class="product-card">
+                    <img src="https://via.placeholder.com/300x200.png?text=Desinfectante" alt="Imagen de Desinfectante en Aerosol">
                     <h3>Desinfectante en Aerosol 400ml</h3>
-                    <p class="descripcion">Aerosol desinfectante para ambientes y superficies. Elimina el 99.9% de gérmenes.</p>
+                    <p class="descripcion">Para ambientes y superficies. Elimina el 99.9% de gérmenes.</p>
                     <p class="precio">Gs. 25.000</p>
                     <p class="stock">Stock: 30 unidades</p>
                 </article>
-                <article class="producto-card">
-                    <img src="images/papel_higienico.jpeg" alt="Imagen de Papel Higiénico">
+                
+                <article class="product-card">
+                    <img src="https://via.placeholder.com/300x200.png?text=Papel+Higiénico" alt="Imagen de Papel Higiénico">
                     <h3>Papel Higiénico Pack x4</h3>
-                    <p class="descripcion">Papel higiénico doble hoja, suave y resistente. Paquete de 4 rollos.</p>
+                    <p class="descripcion">Doble hoja, suave y resistente. Paquete de 4 rollos de larga duración.</p>
                     <p class="precio">Gs. 10.000</p>
                     <p class="stock">Stock: 55 packs</p>
                 </article>
@@ -83,14 +97,18 @@
         </section>
     </main>
 
+    <!-- Pie de página con información de contacto -->
     <footer>
-        <p>Encuéntranos en nuestras redes sociales:</p>
-        <div class="redes-sociales">
-            <a href="https://wa.me/0984322168" target="_blank">WhatsApp</a>
+        <div class="container">
+            <p>Encuéntranos en nuestras redes sociales:</p>
+            <div class="redes-sociales">
+                <a href="https://wa.me/595984322168" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2024 Despensa Gimenita. Todos los derechos reservados.</p>
         </div>
-        <p>&copy; 2024 Despensa Gimenita. Todos los derechos reservados.</p>
     </footer>
 
 </body>
-
 </html>

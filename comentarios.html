@@ -1,47 +1,54 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Comentarios - Despensa Gimenita</title>
+    
+    <!-- Hoja de estilos unificada -->
     <link rel="stylesheet" href="styles/style.css">
+    
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
-    <header>
-        <h1>Despensa Gimenita</h1>
+
+    <!-- Encabezado principal del sitio -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><i class="fas fa-store"></i> Despensa Gimenita</a>
+            </div>
+            <!-- Menú de navegación principal -->
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <!-- Menú desplegable para productos -->
+                    <li class="submenu">
+                        <a href="#">Productos <i class="fas fa-chevron-down fa-xs"></i></a>
+                        <div class="dropdown-content">
+                            <a href="carnicos.html">Cárnicos</a>
+                            <a href="prd_limpieza.html">Limpieza</a>
+                            <a href="bebidas.html">Bebidas</a>
+                            <a href="lacteos.html">Lácteos</a>
+                        </div>
+                    </li>
+                    <li><a href="comentarios.html" class="active">Comentarios</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html">Inicio</a></li>
-            <li>
-                <a href="#">Productos</a>
-                <ul class="submenu">
-                    <li><a href="carnicos.html">Cárnicos</a></li>
-                    <li><a href="lacteos.html">Lácteos</a></li>
-                    <li><a href="prd_limpieza.html">Productos de Limpieza</a></li>
-                    <li><a href="bebidas.html">Bebidas</a></li>
-                </ul>
-            </li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="comentarios.html" class="active">Comentarios</a></li>
-        </ul>
-    </nav>
-
     <main>
-        <div class="comentarios-container">
-            <!-- Hero section mejorado -->
-            <div class="hero-comentarios">
-                <h1>¡Queremos Escucharte!</h1>
-                <p>Tu opinión es muy importante para nosotros. Comparte tu experiencia y ayúdanos a mejorar cada día.
-                </p>
-            </div>
+        <section class="container">
+            <h2 class="section-title">¡Queremos Escucharte!</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 50px auto;">
+                Tu opinión es muy importante para nosotros. Comparte tu experiencia y ayúdanos a mejorar cada día para ofrecerte el mejor servicio posible.
+            </p>
 
-            <!-- Formulario mejorado -->
+            <!-- Formulario de comentarios con estilos mejorados -->
             <div class="form-container">
-                <h2 style="color: #2E7D32; margin-bottom: 25px; text-align: center;">Déjanos tu Comentario</h2>
                 <form id="comentariosForm">
                     <div class="form-group">
                         <label for="nombre">👤 Nombre completo:</label>
@@ -53,13 +60,8 @@
                         <input type="email" id="email" name="email" required placeholder="ejemplo@correo.com">
                     </div>
 
-                    <div class="form-group">
-                        <label for="telefono">📱 Teléfono (opcional):</label>
-                        <input type="tel" id="telefono" name="telefono" placeholder="0984-123-456">
-                    </div>
-
                     <!-- Sistema de calificación con estrellas -->
-                    <div class="rating-section">
+                    <div class="form-group">
                         <label>⭐ Califica tu experiencia:</label>
                         <div class="rating-stars">
                             <span class="star" data-rating="1">★</span>
@@ -71,260 +73,113 @@
                     </div>
 
                     <div class="form-group">
-                        <label for="categoria">🏷️ Categoría del comentario:</label>
-                        <select id="categoria" name="categoria"
-                            style="width: 100%; padding: 12px 15px; border: 2px solid #e0e0e0; border-radius: 8px; font-size: 1em;">
-                            <option value="">Selecciona una categoría</option>
-                            <option value="producto">Productos</option>
-                            <option value="servicio">Atención al Cliente</option>
-                            <option value="local">Instalaciones</option>
-                            <option value="sugerencia">Sugerencias</option>
-                            <option value="otro">Otro</option>
-                        </select>
-                    </div>
-
-                    <div class="form-group">
                         <label for="comentario">💬 Cuéntanos tu experiencia:</label>
-                        <textarea id="comentario" name="comentario" rows="6" required
-                            placeholder="Describe tu experiencia con nosotros, qué te gustó más, qué podríamos mejorar..."></textarea>
+                        <textarea id="comentario" name="comentario" rows="6" required placeholder="Describe qué te gustó, qué podríamos mejorar..."></textarea>
                     </div>
 
                     <button type="submit" class="submit-btn">Enviar Comentario</button>
                 </form>
 
+                <!-- Mensaje de éxito (oculto por defecto) -->
                 <div id="mensajeEnvio" class="mensaje-exito">
                     <h3>¡Gracias por tu comentario! 🎉</h3>
-                    <p>Tu opinión es muy valiosa para nosotros. Te contactaremos pronto.</p>
+                    <p>Tu opinión ha sido enviada y es muy valiosa para nosotros.</p>
                 </div>
             </div>
-
-            <!-- Sección de testimonios -->
-            <div class="testimonios-section">
-                <h2 style="color: #2E7D32; text-align: center; margin-bottom: 30px;">💭 Lo que dicen nuestros clientes
-                </h2>
-                <div class="testimonios-grid">
-                    <div class="testimonio-card">
-                        <div class="testimonio-rating">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonio-texto">"Excelente atención y productos frescos. El personal siempre está
-                            dispuesto a ayudar con una sonrisa."</p>
-                        <p class="testimonio-autor">- María González</p>
-                    </div>
-                    <div class="testimonio-card">
-                        <div class="testimonio-rating">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonio-texto">"La mejor despensa del barrio. Precios justos y gran variedad de
-                            productos."</p>
-                        <p class="testimonio-autor">- Carlos Rodríguez</p>
-                    </div>
-                    <div class="testimonio-card">
-                        <div class="testimonio-rating">⭐⭐⭐⭐⭐</div>
-                        <p class="testimonio-texto">"Muy conveniente y siempre tienen lo que necesito. Recomendado al
-                            100%."</p>
-                        <p class="testimonio-autor">- Ana Martínez</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Sección de beneficios -->
-            <div class="beneficios-section">
-                <h2 style="color: #2E7D32; text-align: center; margin-bottom: 20px;">🎁 ¿Por qué elegirnos?</h2>
-                <div class="beneficios-grid">
-                    <div class="beneficio-item">
-                        <div class="beneficio-icon">🕐</div>
-                        <div class="beneficio-title">Horarios Convenientes</div>
-                        <p>Abierto todos los días para tu comodidad</p>
-                    </div>
-                    <div class="beneficio-item">
-                        <div class="beneficio-icon">💰</div>
-                        <div class="beneficio-title">Precios Justos</div>
-                        <p>Los mejores precios del barrio</p>
-                    </div>
-                    <div class="beneficio-item">
-                        <div class="beneficio-icon">🛒</div>
-                        <div class="beneficio-title">Gran Variedad</div>
-                        <p>Todo lo que necesitas en un solo lugar</p>
-                    </div>
-                    <div class="beneficio-item">
-                        <div class="beneficio-icon">🤝</div>
-                        <div class="beneficio-title">Atención Personalizada</div>
-                        <p>Servicio amable y profesional</p>
-                    </div>
-                </div>
-            </div>
-
-
-        </div>
+        </section>
     </main>
 
+    <!-- Pie de página con información de contacto -->
     <footer>
-        <p>Encuéntranos en nuestras redes sociales:</p>
-        <div class="redes-sociales">
-            <a href="https://wa.me/0984322168" target="_blank">WhatsApp</a>
+        <div class="container">
+            <p>Encuéntranos en nuestras redes sociales:</p>
+            <div class="redes-sociales">
+                <a href="https://wa.me/595984322168" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2024 Despensa Gimenita. Todos los derechos reservados.</p>
         </div>
-        <p>&copy; 2024 Despensa Gimenita. Todos los derechos reservados.</p>
     </footer>
 
+    <!-- Script para la funcionalidad del formulario y las estrellas -->
     <script>
-        // Sistema de calificación con estrellas
-        let currentRating = 0;
-        const stars = document.querySelectorAll('.star');
+        document.addEventListener('DOMContentLoaded', function () {
+            
+            // --- Sistema de calificación con estrellas ---
+            let currentRating = 0;
+            const stars = document.querySelectorAll('.star');
 
-        // Evento para cada estrella
-        stars.forEach((star, index) => {
-            // Hover effect - ilumina las estrellas hasta la posición actual
-            star.addEventListener('mouseenter', () => {
-                highlightStars(index + 1);
-            });
-
-            // Click event - establece la calificación
-            star.addEventListener('click', () => {
-                currentRating = index + 1;
-                setRating(currentRating);
-            });
-        });
-
-        // Restaurar calificación cuando el mouse sale del área
-        document.querySelector('.rating-stars').addEventListener('mouseleave', () => {
-            setRating(currentRating);
-        });
-
-        // Función para iluminar estrellas
-        function highlightStars(rating) {
             stars.forEach((star, index) => {
-                if (index < rating) {
-                    star.classList.add('active');
-                } else {
-                    star.classList.remove('active');
-                }
+                star.addEventListener('mouseenter', () => highlightStars(index + 1));
+                star.addEventListener('click', () => setRating(index + 1));
             });
-        }
 
-        // Función para establecer la calificación
-        function setRating(rating) {
-            currentRating = rating;
-            highlightStars(rating);
-        }
+            document.querySelector('.rating-stars').addEventListener('mouseleave', () => highlightStars(currentRating));
 
-        // Validación mejorada del formulario
-        document.getElementById('comentariosForm').addEventListener('submit', function (e) {
-            e.preventDefault();
-
-            // Obtener valores del formulario
-            const nombre = document.getElementById('nombre').value.trim();
-            const email = document.getElementById('email').value.trim();
-            const telefono = document.getElementById('telefono').value.trim();
-            const categoria = document.getElementById('categoria').value;
-            const comentario = document.getElementById('comentario').value.trim();
-
-            // Validaciones adicionales
-            if (!nombre) {
-                alert('Por favor, ingresa tu nombre completo.');
-                document.getElementById('nombre').focus();
-                return;
+            function highlightStars(rating) {
+                stars.forEach((star, index) => {
+                    star.classList.toggle('active', index < rating);
+                });
             }
 
-            if (!email || !validateEmail(email)) {
-                alert('Por favor, ingresa un correo electrónico válido.');
-                document.getElementById('email').focus();
-                return;
+            function setRating(rating) {
+                currentRating = rating;
+                highlightStars(rating);
             }
 
-            if (!comentario || comentario.length < 10) {
-                alert('Por favor, ingresa un comentario de al menos 10 caracteres.');
-                document.getElementById('comentario').focus();
-                return;
-            }
+            // --- Envío del formulario con mailto: ---
+            document.getElementById('comentariosForm').addEventListener('submit', function (e) {
+                e.preventDefault(); // Prevenir el envío normal del formulario
 
-            // Preparar datos para el correo
-            const destinatario = "peraltasanabriaj14@gmail.com";
-            const asunto = encodeURIComponent("Nuevo comentario de cliente - Despensa Gimenita");
+                // Obtener los valores de los campos
+                const nombre = document.getElementById('nombre').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const comentario = document.getElementById('comentario').value.trim();
 
-            // Crear el cuerpo del mensaje con toda la información
-            let cuerpoMensaje = `NUEVO COMENTARIO DE CLIENTE\n\n`;
-            cuerpoMensaje += `👤 Nombre: ${nombre}\n`;
-            cuerpoMensaje += `📧 Email: ${email}\n`;
-            if (telefono) cuerpoMensaje += `📱 Teléfono: ${telefono}\n`;
-            if (currentRating > 0) cuerpoMensaje += `⭐ Calificación: ${currentRating}/5 estrellas\n`;
-            if (categoria) cuerpoMensaje += `🏷️ Categoría: ${categoria}\n`;
-            cuerpoMensaje += `\n💬 Comentario:\n${comentario}\n\n`;
-            cuerpoMensaje += `Fecha: ${new Date().toLocaleString()}\n`;
-            cuerpoMensaje += `---\nEnviado desde la página web de Despensa Gimenita`;
-
-            const cuerpo = encodeURIComponent(cuerpoMensaje);
-
-            // Abrir cliente de correo
-            window.location.href = `mailto:${destinatario}?subject=${asunto}&body=${cuerpo}`;
-
-            // Mostrar mensaje de éxito con animación
-            const mensajeEnvio = document.getElementById('mensajeEnvio');
-            mensajeEnvio.style.display = 'block';
-
-            // Limpiar formulario
-            document.getElementById('comentariosForm').reset();
-            setRating(0);
-
-            // Scroll suave hacia el mensaje de éxito
-            mensajeEnvio.scrollIntoView({ behavior: 'smooth' });
-
-            // Opcional: Ocultar mensaje después de 5 segundos
-            setTimeout(() => {
-                mensajeEnvio.style.display = 'none';
-            }, 5000);
-        });
-
-        // Función para validar email
-        function validateEmail(email) {
-            const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            return re.test(email);
-        }
-
-        // Efecto de escritura en tiempo real para el contador de caracteres
-        document.getElementById('comentario').addEventListener('input', function () {
-            const textarea = this;
-            const maxLength = 500;
-            const currentLength = textarea.value.length;
-
-            // Crear contador si no existe
-            let contador = document.getElementById('contador-caracteres');
-            if (!contador) {
-                contador = document.createElement('div');
-                contador.id = 'contador-caracteres';
-                contador.style.cssText = 'text-align: right; font-size: 0.9em; color: #666; margin-top: 5px;';
-                textarea.parentNode.appendChild(contador);
-            }
-
-            // Actualizar contador
-            contador.textContent = `${currentLength}/500 caracteres`;
-
-            // Cambiar color si se acerca al límite
-            if (currentLength > 400) {
-                contador.style.color = '#ff9800';
-            } else if (currentLength > 450) {
-                contador.style.color = '#f44336';
-            } else {
-                contador.style.color = '#666';
-            }
-        });
-
-        // Animación de entrada para las tarjetas de testimonio
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.style.animation = 'slideIn 0.6s ease-out forwards';
+                // Validación simple para asegurar que los campos no estén vacíos
+                if (!nombre || !email || !comentario) {
+                    alert('Por favor, completa todos los campos requeridos.');
+                    return;
                 }
-            });
-        }, observerOptions);
 
-        // Observar las tarjetas de testimonio
-        document.querySelectorAll('.testimonio-card').forEach(card => {
-            observer.observe(card);
+                // --- Construcción del enlace mailto: ---
+
+                // Reemplaza esta dirección con el correo donde quieres recibir los comentarios
+                const destinatario = "peraltasanabriaj14@gmail.com"; 
+                
+                // Asunto del correo
+                const asunto = encodeURIComponent("Nuevo comentario de cliente - Despensa Gimenita");
+
+                // Cuerpo del correo, formateado para fácil lectura
+                let cuerpoMensaje = `NUEVO COMENTARIO DE CLIENTE\n\n`;
+                cuerpoMensaje += `----------------------------------------\n`;
+                cuerpoMensaje += `👤 Nombre: ${nombre}\n`;
+                cuerpoMensaje += `📧 Email de contacto: ${email}\n`;
+                if (currentRating > 0) {
+                    cuerpoMensaje += `⭐ Calificación: ${currentRating} de 5 estrellas\n`;
+                }
+                cuerpoMensaje += `----------------------------------------\n\n`;
+                cuerpoMensaje += `💬 Comentario:\n${comentario}\n\n`;
+                cuerpoMensaje += `---\nEnviado desde el formulario de la página web.`;
+                
+                const cuerpo = encodeURIComponent(cuerpoMensaje);
+
+                // Abrir el cliente de correo del usuario con los datos precargados
+                window.location.href = `mailto:${destinatario}?subject=${asunto}&body=${cuerpo}`;
+
+                // Mostrar un mensaje de éxito en la página
+                const mensajeEnvio = document.getElementById('mensajeEnvio');
+                mensajeEnvio.style.display = 'block';
+
+                // Opcional: resetear el formulario después de un tiempo
+                setTimeout(() => {
+                    document.getElementById('comentariosForm').reset();
+                    setRating(0); // Reiniciar las estrellas
+                }, 4000);
+            });
         });
     </script>
 
 </body>
-
 </html>

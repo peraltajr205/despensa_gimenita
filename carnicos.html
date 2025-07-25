@@ -1,96 +1,114 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Despensa Gimenita - Cárnicos</title>
+    <title>Despensa Gimenita - Productos de Limpieza</title>
+    
+    <!-- Hoja de estilos unificada -->
     <link rel="stylesheet" href="styles/style.css">
+    
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
-    <header>
-        <h1>Despensa Gimenita</h1>
+
+    <!-- Encabezado principal del sitio -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><i class="fas fa-store"></i> Despensa Gimenita</a>
+            </div>
+            <!-- Menú de navegación principal -->
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <!-- Menú desplegable para productos -->
+                    <li class="submenu">
+                        <a href="#" class="active">Productos <i class="fas fa-chevron-down fa-xs"></i></a>
+                        <div class="dropdown-content">
+                            <a href="carnicos.html">Cárnicos</a>
+                            <a href="prd_limpieza.html">Limpieza</a>
+                            <a href="bebidas.html">Bebidas</a>
+                            <a href="lacteos.html">Lácteos</a>
+                        </div>
+                    </li>
+                    <li><a href="comentarios.html">Comentarios</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html" class="active">Inicio</a></li>
-            <li>
-                <a href="#">Productos</a>
-                <ul class="submenu">
-                    <li><a href="carnicos.html">Cárnicos</a></li>
-                    <li><a href="lacteos.html">Lácteos</a></li>
-                    <li><a href="prd_limpieza.html">Productos de Limpieza</a></li>
-                    <li><a href="bebidas.html">Bebidas</a></li>
-                </ul>
-            </li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="comentarios.html">Comentarios</a></li>
-        </ul>
-    </nav>
-
     <main>
-        <section class="productos-categoria">
-            <h2>Nuestros Productos Cárnicos</h2>
-            <div class="grid-productos">
-                <article class="producto-card">
-                    <img src="images/milanesa.png" alt="Imagen de Milanesa de Carne">
-                    <h3>Milanesa de lomo</h3>
-                    <p class="descripcion">Corte fresco de lomo empanado para milanesa, tierna y sabrosa.</p>
-                    <p class="precio">Gs. 45.000/kg</p>
-                    <p class="stock">Stock: 20 kg</p>
+        <section class="container">
+            <h2 class="section-title">Cárnicos</h2>
+
+            <!-- Grid para mostrar los productos de cárnicos -->
+            <div class="grid-layout">
+                <article class="product-card">
+                    <img src="images/carnaza_negra.jpeg" alt="Imagen de Carne de Res">
+                    <h3>Carnaza Negra 1kg</h3>
+                    <p class="descripcion">Carne de res de primera calidad. Ideal para guisos.</p>
+                    <p class="precio">Gs. 40.000</p>
+                    <p class="stock">Stock: 20 unidades</p>
                 </article>
 
-                <article class="producto-card">
-                    <img src="images/pechuga_congelada.jpeg" alt="Imagen de Pechuga de Pollo">
-                    <h3>Pechuga de Pollo Deshuesada</h3>
-                    <p class="descripcion">Pechugas de pollo congeladas. Ideal para múltiples recetas.</p>
-                    <p class="precio">Gs. 35.000/kg</p>
-                    <p class="stock">Stock: 25 kg</p>
+                <article class="product-card">
+                    <img src="images/hamburguesa.jpeg" alt="Imagen de Hamburguesa">
+                    <h3>Hamburguesa 1kg</h3>
+                    <p class="descripcion">Carne molida de res, ideal para hamburguesas jugosas.</p>
+                    <p class="precio">Gs. 35.000</p>
+                    <p class="stock">Stock: 15 unidades</p>
                 </article>
 
-                <article class="producto-card">
-                    <img src="images/carnaza_negra.jpeg" alt="Imagen de carnaza negra">
-                    <h3>Carnaza negra</h3>
-                    <p class="descripcion">Carnaza negra por kilo, perfectas para un guiso o tallarín.</p>
-                    <p class="precio">Gs. 40.000/kg</p>
-                    <p class="stock">Stock: 18 kg</p>
-                </article>
-
-                <article class="producto-card">
-                    <img src="images/chorizo_parrillero.png" alt="Imagen de Chorizo Parrillero">
-                    <h3>Chorizo Parrillero Tradicional</h3>
-                    <p class="descripcion">Chorizos frescos tipo toscano, ideales para asados y picadas.</p>
-                    <p class="precio">Gs. 38.000/kg</p>
-                    <p class="stock">Stock: 30 unidades</p>
-                </article>
-                 <article class="producto-card">
+                <article class="product-card">
                     <img src="images/carne_molida.jpeg" alt="Imagen de Carne Molida">
-                    <h3>Carne Molida Especial</h3>
-                    <p class="descripcion">Carne vacuna molida de primera calidad, baja en grasa. Perfecta para salsas y hamburguesas.</p>
-                    <p class="precio">Gs. 32.000/kg</p>
-                    <p class="stock">Stock: 22 kg</p>
+                    <h3>Carne Molida 1kg</h3>
+                    <p class="descripcion">Carne molida de res, ideal para preparar albóndigas y salsas.</p>
+                    <p class="precio">Gs. 30.000</p>
+                    <p class="stock">Stock: 25 unidades</p>
                 </article>
-                 <article class="producto-card">
-                    <img src="images/hamburguesa.jpeg" alt="Imagen de Hamburguesas">
-                    <h3>Medallones de Hamburguesa</h3>
-                    <p class="descripcion">Medallones de hamburguesa listos para cocinar.</p>
-                    <p class="precio">Gs. 2.500/unidad</p>
-                    <p class="stock">Stock: 40 unidades</p>
+
+                <article class="product-card">
+                    <img src="images/chorizo_parrillero.png" alt="Imagen de Chorizo Parrillero">
+                    <h3>Chorizo Parrillero 1kg</h3>
+                    <p class="descripcion">Chorizo de cerdo, ideal para asados y parrilladas.</p>
+                    <p class="precio">Gs. 45.000</p>
+                    <p class="stock">Stock: 10 unidades</p>
+                </article>
+                
+                <article class="product-card">
+                    <img src="images/pollo.png" alt="Imagen de Pollo">
+                    <h3>Pollo Entero 1.5kg</h3>
+                    <p class="descripcion">Pollo fresco, ideal para asar o guisar.</p>
+                    <p class="precio">Gs. 50.000</p>
+                    <p class="stock">Stock: 20 unidades</p>
+                </article>
+                
+                <article class="product-card">
+                    <img src="images/milanesa.png" alt="Imagen de Milanesa">
+                    <h3>Milanesa de Pollo 1kg</h3>
+                    <p class="descripcion">Filete de pollo empanizado, ideal para freír.</p>
+                    <p class="precio">Gs. 45.000</p>
+                    <p class="stock">Stock: 15 unidades</p>
                 </article>
             </div>
         </section>
     </main>
 
+    <!-- Pie de página con información de contacto -->
     <footer>
-        <p>Encuéntranos en nuestras redes sociales:</p>
-        <div class="redes-sociales">
-            <a href="https://wa.me/0984322168" target="_blank">WhatsApp</a>
+        <div class="container">
+            <p>Encuéntranos en nuestras redes sociales:</p>
+            <div class="redes-sociales">
+                <a href="https://wa.me/595984322168" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2024 Despensa Gimenita. Todos los derechos reservados.</p>
         </div>
-        <p>&copy; 2024 Despensa Gimenita. Todos los derechos reservados.</p>
     </footer>
 
 </body>
-
 </html>

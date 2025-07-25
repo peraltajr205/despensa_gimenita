@@ -1,96 +1,114 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Despensa Gimenita - Lácteos</title>
+    <title>Despensa Gimenita - Productos de Limpieza</title>
+    
+    <!-- Hoja de estilos unificada -->
     <link rel="stylesheet" href="styles/style.css">
+    
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
-    <header>
-        <h1>Despensa Gimenita</h1>
+
+    <!-- Encabezado principal del sitio -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html"><i class="fas fa-store"></i> Despensa Gimenita</a>
+            </div>
+            <!-- Menú de navegación principal -->
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <!-- Menú desplegable para productos -->
+                    <li class="submenu">
+                        <a href="#" class="active">Productos <i class="fas fa-chevron-down fa-xs"></i></a>
+                        <div class="dropdown-content">
+                            <a href="carnicos.html">Cárnicos</a>
+                            <a href="prd_limpieza.html">Limpieza</a>
+                            <a href="bebidas.html">Bebidas</a>
+                            <a href="lacteos.html">Lácteos</a>
+                        </div>
+                    </li>
+                    <li><a href="comentarios.html">Comentarios</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html" class="active">Inicio</a></li>
-            <li>
-                <a href="#">Productos</a>
-                <ul class="submenu">
-                    <li><a href="carnicos.html">Cárnicos</a></li>
-                    <li><a href="lacteos.html">Lácteos</a></li>
-                    <li><a href="prd_limpieza.html">Productos de Limpieza</a></li>
-                    <li><a href="bebidas.html">Bebidas</a></li>
-                </ul>
-            </li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="comentarios.html">Comentarios</a></li>
-        </ul>
-    </nav>
-
     <main>
-        <section class="productos-categoria">
-            <h2>Nuestra Selección de Lácteos</h2>
-            <div class="grid-productos">
-                <article class="producto-card">
-                    <img src="images/leche-lactolanda_500x375.jpg" alt="Imagen de Leche Entera">
-                    <h3>Leche Entera Larga Vida 1L</h3>
-                    <p class="descripcion">Leche entera UHT, fuente de calcio y vitaminas. Ideal para toda la familia.</p>
-                    <p class="precio">Gs. 7.500</p>
-                    <p class="stock">Stock: 60 unidades</p>
+        <section class="container">
+            <h2 class="section-title">ácteos</h2>
+
+            <!-- Grid para mostrar los productos de lácteos -->
+            <div class="grid-layout">
+                <article class="product-card">
+                    <img src="images/crema_de_leche.png" alt="Imagen de Crema de Leche">
+                    <h3>Crema de Leche 200ml</h3>
+                    <p class="descripcion">Crema de leche fresca, ideal para postres y salsas.</p>
+                    <p class="precio">Gs. 12.000</p>
+                    <p class="stock">Stock: 30 unidades</p>
                 </article>
 
-                <article class="producto-card">
-                    <img src="images/queso_danbo.png" alt="Imagen de Queso danbo">
-                    <h3>Queso Paraguay Fresco</h3>
-                    <p class="descripcion">Queso danbo tradicional, suave y delicioso. Perfecto para sándwiches.</p>
-                    <p class="precio">Gs. 30.000/kg</p>
-                    <p class="stock">Stock: 15 piezas</p>
-                </article>
-
-                <article class="producto-card">
+                <article class="product-card">
                     <img src="images/yogurt_frutilla.png" alt="Imagen de Yogurt de Frutilla">
-                    <h3>Yogurt Bebible Sabor Frutilla 1L</h3>
-                    <p class="descripcion">Yogurt bebible con pulpa de frutilla, cremoso y refrescante.</p>
+                    <h3>Yogurt de Frutilla 1L</h3>
+                    <p class="descripcion">Yogurt cremoso con sabor a frutilla. Ideal para el desayuno.</p>
                     <p class="precio">Gs. 10.000</p>
                     <p class="stock">Stock: 40 unidades</p>
                 </article>
 
-                <article class="producto-card">
+                <article class="product-card">
+                    <img src="images/queso_mozzarella.jpg" alt="Imagen de Queso Mozzarella">
+                    <h3>Queso Mozzarella 200g</h3>
+                    <p class="descripcion">Queso mozzarella fresco, ideal para pizzas y ensaladas.</p>
+                    <p class="precio">Gs. 15.000</p>
+                    <p class="stock">Stock: 25 unidades</p>
+                </article>
+
+                <article class="product-card">
                     <img src="images/manteca_con_sal.png" alt="Imagen de Manteca con Sal">
                     <h3>Manteca con Sal 200g</h3>
-                    <p class="descripcion">Manteca de primera calidad con un toque de sal. Ideal para untar y cocinar.</p>
-                    <p class="precio">Gs. 12.000</p>
+                    <p class="descripcion">Manteca fresca, ideal para cocinar y hornear.</p>
+                    <p class="precio">Gs. 8.000</p>
+                    <p class="stock">Stock: 50 unidades</p>
+                </article>
+                
+                <article class="product-card">
+                    <img src="images/dulce_leche.png" alt="Imagen de Dulce de Leche">
+                    <h3>Dulce de Leche 400g</h3>
+                    <p class="descripcion">Dulce de leche cremoso, ideal para postres y acompañar tus comidas.</p>
+                    <p class="precio">Gs. 15.000</p>
                     <p class="stock">Stock: 30 unidades</p>
                 </article>
-                <article class="producto-card">
-                    <img src="images/crema_de_leche.png" alt="Imagen de Crema de Leche">
-                    <h3>Crema de Leche 200ml</h3>
-                    <p class="descripcion">Crema de leche fresca, perfecta para postres, salsas y cafés.</p>
-                    <p class="precio">Gs. 6.500</p>
-                    <p class="stock">Stock: 35 unidades</p>
-                </article>
-                <article class="producto-card">
-                    <img src="images/dulce_leche.png" alt="Imagen de Dulce de Leche">
-                    <h3>Dulce de Leche Clásico 400g</h3>
-                    <p class="descripcion">Tradicional dulce de leche, cremoso y con el punto justo de dulzor.</p>
-                    <p class="precio">Gs. 15.000</p>
-                    <p class="stock">Stock: 28 unidades</p>
+                
+                <article class="product-card">
+                    <img src="images/leche-lactolanda_500x375.jpg" alt="Imagen de Leche en carton">
+                    <h3>Leche Lactolanda 1L</h3>
+                    <p class="descripcion">Leche entera Lactolanda, ideal para fortificar los huesos</p>
+                    <p class="precio">Gs. 6.000</p>
+                    <p class="stock">Stock: 55 unidades</p>
                 </article>
             </div>
         </section>
     </main>
 
+    <!-- Pie de página con información de contacto -->
     <footer>
-        <p>Encuéntranos en nuestras redes sociales:</p>
-        <div class="redes-sociales">
-            <a href="https://wa.me/0984322168" target="_blank">WhatsApp</a>
+        <div class="container">
+            <p>Encuéntranos en nuestras redes sociales:</p>
+            <div class="redes-sociales">
+                <a href="https://wa.me/595984322168" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" target="_blank" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+            </div>
+            <p>&copy; 2024 Despensa Gimenita. Todos los derechos reservados.</p>
         </div>
-        <p>&copy; 2024 Despensa Gimenita. Todos los derechos reservados.</p>
     </footer>
 
 </body>
-
 </html>
