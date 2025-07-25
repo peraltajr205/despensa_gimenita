@@ -4,32 +4,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Despensa Gimenita - Inicio</title>
-    <!-- Hoja de estilos principal -->
+    
+    <!-- Hoja de estilos unificada -->
     <link rel="stylesheet" href="styles/style.css">
+    
     <!-- Font Awesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body>
-    <!-- Encabezado principal con logo y nombre -->
+
+    <!-- Encabezado principal del sitio -->
     <header class="header">
         <div class="container">
             <div class="logo">
-                <h1><i class="fas fa-store"></i> Despensa Gimenita</h1>
+                <a href="index.html"><i class="fas fa-store"></i> Despensa Gimenita</a>
             </div>
-            <!-- Navegación principal -->
-            <nav class="nav">
-                <button class="nav-toggle" aria-label="Abrir menú">
-                    <i class="fas fa-bars"></i>
-                </button>
+            <!-- Menú de navegación principal -->
+            <nav>
                 <ul class="nav-menu">
                     <li><a href="index.html" class="active">Inicio</a></li>
                     <li><a href="nosotros.html">Nosotros</a></li>
                     <!-- Menú desplegable para productos -->
                     <li class="submenu">
-                        <a href="#" class="dropbtn">Productos <i class="fas fa-chevron-down"></i></a>
+                        <a href="#">Productos <i class="fas fa-chevron-down fa-xs"></i></a>
                         <div class="dropdown-content">
                             <a href="carnicos.html">Cárnicos</a>
-                            <a href="limpieza.html">Limpieza</a>
+                            <a href="prd_limpieza.html">Limpieza</a>
                             <a href="bebidas.html">Bebidas</a>
                             <a href="lacteos.html">Lácteos</a>
                         </div>
@@ -45,27 +45,27 @@
         <section class="slider-container">
             <div class="slider">
                 <!-- Slide 1 -->
-                <div class="slide active">
-                    <img src="images/carnaza_negra.jpeg" alt="Producto destacado 1">
+                <div class="slide">
+                    <img src="images/carne_molida.jpeg" alt="Imagen de carnes frescas">
                     <div class="slide-caption">
                         <h2>Calidad y Frescura en Carnes</h2>
-                        <p>Los mejores cortes para tus comidas.</p>
+                        <p>Los mejores cortes para tus comidas diarias y asados de fin de semana.</p>
                     </div>
                 </div>
                 <!-- Slide 2 -->
                 <div class="slide">
-                    <img src="images/coca_cola.jpg" alt="Producto destacado 2">
+                    <img src="images/vino_tinto.jpeg" alt="Imagen de bebidas variadas">
                     <div class="slide-caption">
                         <h2>Variedad de Bebidas</h2>
-                        <p>Encuentra tu bebida favorita al mejor precio.</p>
+                        <p>Encuentra tu bebida favorita, desde jugos naturales hasta gaseosas, siempre al mejor precio.</p>
                     </div>
                 </div>
                 <!-- Slide 3 -->
                 <div class="slide">
-                    <img src="images/leche-lactolanda_500x375.jpg" alt="Producto destacado 3">
+                    <img src="images/leche-lactolanda_500x375.jpg" alt="Imagen de productos lácteos">
                     <div class="slide-caption">
-                        <h2>Lácteos Frescos</h2>
-                        <p>Leche, quesos y yogures de la mejor calidad.</p>
+                        <h2>Lácteos Frescos y Deliciosos</h2>
+                        <p>Leche, quesos y yogures de la mejor calidad para una alimentación saludable.</p>
                     </div>
                 </div>
             </div>
@@ -75,28 +75,30 @@
         </section>
 
         <!-- Sección de bienvenida -->
-        <section class="welcome-section container">
-            <h2>¡Bienvenido a Despensa Gimenita!</h2>
-            <p>Tu despensa de confianza en el barrio. Ofrecemos una gran variedad de productos frescos y de calidad para tu hogar. Explora nuestro catálogo y descubre todo lo que tenemos para ti.</p>
+        <section class="container">
+            <h2 class="section-title">¡Bienvenido a tu Despensa de Confianza!</h2>
+            <p style="text-align: center; max-width: 800px; margin: 0 auto 50px auto;">
+                En Despensa Gimenita, nos enorgullece ser parte de tu día a día. Ofrecemos una cuidada selección de productos frescos y de calidad para tu hogar. Explora nuestras categorías y descubre por qué somos la opción preferida del barrio.
+            </p>
         </section>
 
         <!-- Acceso rápido a categorías -->
-        <section class="category-access container">
-            <h2>Nuestras Categorías</h2>
-            <div class="category-grid">
-                <a href="carnicos.html" class="category-card">
+        <section class="container">
+            <h2 class="section-title">Nuestras Categorías</h2>
+            <div class="grid-layout">
+                <a href="#" class="category-card">
                     <i class="fas fa-drumstick-bite"></i>
                     <h3>Cárnicos</h3>
                 </a>
-                <a href="limpieza.html" class="category-card">
+                <a href="prd_limpieza.html" class="category-card">
                     <i class="fas fa-soap"></i>
                     <h3>Limpieza</h3>
                 </a>
-                <a href="bebidas.html" class="category-card">
+                <a href="#" class="category-card">
                     <i class="fas fa-wine-bottle"></i>
                     <h3>Bebidas</h3>
                 </a>
-                <a href="lacteos.html" class="category-card">
+                <a href="#" class="category-card">
                     <i class="fas fa-cheese"></i>
                     <h3>Lácteos</h3>
                 </a>
@@ -104,13 +106,53 @@
         </section>
     </main>
 
-    <!-- Pie de página con redes sociales y derechos -->
+    <!-- Pie de página con información de contacto -->
     <footer>
-        <p>Encuéntranos en nuestras redes sociales:</p>
-        <div class="redes-sociales">
-            <a href="https://wa.me/0984322168" target="_blank">WhatsApp</a>
+        <div class="container">
+            <p>Encuéntranos en nuestras redes sociales:</p>
+            <div class="redes-sociales">
+                <a href="https://wa.me/595984322168" target="_blank" title="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            <p>&copy; 2024 Despensa Gimenita. Todos los derechos reservados.</p>
         </div>
-        <p>&copy; 2024 Despensa Gimenita. Todos los derechos reservados.</p>
     </footer>
+
+    <!-- Script para la funcionalidad del Slider -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const slider = document.querySelector('.slider');
+            const slides = document.querySelectorAll('.slide');
+            const prevBtn = document.querySelector('.prev');
+            const nextBtn = document.querySelector('.next');
+            
+            let currentIndex = 0;
+            const slideCount = slides.length;
+
+            function goToSlide(index) {
+                // Asegurarse que el índice esté en el rango correcto
+                if (index < 0) {
+                    index = slideCount - 1;
+                } else if (index >= slideCount) {
+                    index = 0;
+                }
+                slider.style.transform = `translateX(-${index * 100}%)`;
+                currentIndex = index;
+            }
+
+            // Eventos para los botones
+            prevBtn.addEventListener('click', () => {
+                goToSlide(currentIndex - 1);
+            });
+
+            nextBtn.addEventListener('click', () => {
+                goToSlide(currentIndex + 1);
+            });
+
+            // Avance automático cada 5 segundos
+            setInterval(() => {
+                goToSlide(currentIndex + 1);
+            }, 5000);
+        });
+    </script>
 </body>
 </html>
