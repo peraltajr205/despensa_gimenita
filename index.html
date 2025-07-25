@@ -1,78 +1,110 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Despensa Gimenita - Inicio</title>
+    <!-- Hoja de estilos principal -->
     <link rel="stylesheet" href="styles/style.css">
+    <!-- Font Awesome para iconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
-
 <body>
-
-    <header>
-        <h1>Despensa Gimenita</h1>
+    <!-- Encabezado principal con logo y nombre -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1><i class="fas fa-store"></i> Despensa Gimenita</h1>
+            </div>
+            <!-- Navegación principal -->
+            <nav class="nav">
+                <button class="nav-toggle" aria-label="Abrir menú">
+                    <i class="fas fa-bars"></i>
+                </button>
+                <ul class="nav-menu">
+                    <li><a href="index.html" class="active">Inicio</a></li>
+                    <li><a href="nosotros.html">Nosotros</a></li>
+                    <!-- Menú desplegable para productos -->
+                    <li class="submenu">
+                        <a href="#" class="dropbtn">Productos <i class="fas fa-chevron-down"></i></a>
+                        <div class="dropdown-content">
+                            <a href="carnicos.html">Cárnicos</a>
+                            <a href="limpieza.html">Limpieza</a>
+                            <a href="bebidas.html">Bebidas</a>
+                            <a href="lacteos.html">Lácteos</a>
+                        </div>
+                    </li>
+                    <li><a href="comentarios.html">Comentarios</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
-    <nav>
-        <ul>
-            <li><a href="index.html" class="active">Inicio</a></li>
-            <li>
-                <a href="#">Productos</a>
-                <ul class="submenu">
-                    <li><a href="carnicos.html">Cárnicos</a></li>
-                    <li><a href="lacteos.html">Lácteos</a></li>
-                    <li><a href="prd_limpieza.html">Productos de Limpieza</a></li>
-                    <li><a href="bebidas.html">Bebidas</a></li>
-                </ul>
-            </li>
-            <li><a href="nosotros.html">Nosotros</a></li>
-            <li><a href="comentarios.html">Comentarios</a></li>
-        </ul>
-    </nav>
-
     <main>
-        <section class="productos-destacados">
-            <h2>Productos Destacados</h2>
-            <div class="grid-productos">
-                <article class="producto-card">
-                    <img src="images/pollo.png" alt="Imagen de Pollo Fresco">
-                    <h3>Pollo Fresco Entero</h3>
-                    <p class="descripcion">Pollo entero, ideal para tus comidas familiares. Calidad garantizada.</p>
-                    <p class="precio">Gs. 15.000/kg</p>
-                    <p class="stock">Stock: 15 unidades</p>
-                </article>
+        <!-- Slider de productos destacados -->
+        <section class="slider-container">
+            <div class="slider">
+                <!-- Slide 1 -->
+                <div class="slide active">
+                    <img src="images/carnaza_negra.jpeg" alt="Producto destacado 1">
+                    <div class="slide-caption">
+                        <h2>Calidad y Frescura en Carnes</h2>
+                        <p>Los mejores cortes para tus comidas.</p>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="slide">
+                    <img src="images/coca_cola.jpg" alt="Producto destacado 2">
+                    <div class="slide-caption">
+                        <h2>Variedad de Bebidas</h2>
+                        <p>Encuentra tu bebida favorita al mejor precio.</p>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="slide">
+                    <img src="images/leche-lactolanda_500x375.jpg" alt="Producto destacado 3">
+                    <div class="slide-caption">
+                        <h2>Lácteos Frescos</h2>
+                        <p>Leche, quesos y yogures de la mejor calidad.</p>
+                    </div>
+                </div>
+            </div>
+            <!-- Botones de navegación del slider -->
+            <button class="slider-btn prev"><i class="fas fa-chevron-left"></i></button>
+            <button class="slider-btn next"><i class="fas fa-chevron-right"></i></button>
+        </section>
 
-                <article class="producto-card">
-                    <img src="images/leche-lactolanda_500x375.jpg" alt="Imagen de Leche Entera">
-                    <h3>Leche Entera Larga Vida</h3>
-                    <p class="descripcion">Leche entera UHT en cartón de 1 litro. Frescura y sabor para tu día a día.
-                    </p>
-                    <p class="precio">Gs. 7.500</p>
-                    <p class="stock">Stock: 50 unidades</p>
-                </article>
+        <!-- Sección de bienvenida -->
+        <section class="welcome-section container">
+            <h2>¡Bienvenido a Despensa Gimenita!</h2>
+            <p>Tu despensa de confianza en el barrio. Ofrecemos una gran variedad de productos frescos y de calidad para tu hogar. Explora nuestro catálogo y descubre todo lo que tenemos para ti.</p>
+        </section>
 
-                <article class="producto-card">
-                    <img src="images/detergente_liquido.jpeg" alt="Imagen de Detergente Líquido">
-                    <h3>Detergente Líquido</h3>
-                    <p class="descripcion">Detergente líquido para ropa, aroma floral. Rinde hasta 30 lavados.</p>
-                    <p class="precio">Gs. 30.000</p>
-                    <p class="stock">Stock: 30 unidades</p>
-                </article>
-
-                <article class="producto-card">
-                    <img src="images/coca_cola.jpg" alt="Imagen de Gaseosa Cola">
-                    <h3>Gaseosa Cola 2L</h3>
-                    <p class="descripcion">Refrescante gaseosa sabor cola en botella de 2 litros. Perfecta para
-                        compartir.</p>
-                    <p class="precio">Gs. 12.000</p>
-                    <p class="stock">Stock: 40 unidades</p>
-                </article>
-
+        <!-- Acceso rápido a categorías -->
+        <section class="category-access container">
+            <h2>Nuestras Categorías</h2>
+            <div class="category-grid">
+                <a href="carnicos.html" class="category-card">
+                    <i class="fas fa-drumstick-bite"></i>
+                    <h3>Cárnicos</h3>
+                </a>
+                <a href="limpieza.html" class="category-card">
+                    <i class="fas fa-soap"></i>
+                    <h3>Limpieza</h3>
+                </a>
+                <a href="bebidas.html" class="category-card">
+                    <i class="fas fa-wine-bottle"></i>
+                    <h3>Bebidas</h3>
+                </a>
+                <a href="lacteos.html" class="category-card">
+                    <i class="fas fa-cheese"></i>
+                    <h3>Lácteos</h3>
+                </a>
             </div>
         </section>
     </main>
 
+    <!-- Pie de página con redes sociales y derechos -->
     <footer>
         <p>Encuéntranos en nuestras redes sociales:</p>
         <div class="redes-sociales">
@@ -80,7 +112,5 @@
         </div>
         <p>&copy; 2024 Despensa Gimenita. Todos los derechos reservados.</p>
     </footer>
-
 </body>
-
 </html>
